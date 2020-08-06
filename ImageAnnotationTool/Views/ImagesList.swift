@@ -25,7 +25,7 @@ struct ImagesList: View {
             List(selection: $currentDoc.imageManager.currentImage) {
                 ForEach(currentDoc.imageManager.images) { image in
                     ImageRow(image: image,
-                             labelsDescription: currentDoc.imageManager.labelsDescription(image: image))
+                             labelsDescription: self.currentDoc.imageManager.labelsDescription(image: image))
                         .tag(image)
                 }
             }
